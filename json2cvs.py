@@ -30,7 +30,7 @@ def parse(json_file):
                 row.append(value.get("osVersion"))
                 row.append(value.get("browserEngine"))
                 row.append(value.get("browserEngineVersion"))
-            else: 
+            else:
                 row.append(value)
 
         if len(row):
@@ -42,7 +42,7 @@ def write(filename, rows):
             'id', 'username', 'clientId', 'clientDescription',
             'ipAddress','asn','blacklist','ip','num_blacklist','org','proxyType','anonymity','city','country','country_code',
             'newDevice','osPlatform','osFamily','osVersion','browserEngine','browserEngineVersion',
-            'reportedAccessDate','reportedAccessStatus','timestamp','additionalClientDescriptions','suspiciousAccessEventCode','suspiciousAccessEventDate','sessionId'
+            'reportedAccessDate','reportedAccessStatus','timestamp','additionalClientDescriptions','suspiciousAccessEventCode', 'suspiciousAccessEventDescr', 'suspiciousAccessEventDate','suspiciousAccessReportDate','sessionId'
          ]
     
     with open(filename, 'w', encoding='UTF8', newline='') as f:
